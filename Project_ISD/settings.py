@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'site_home',
     'site_one',
     'site_two',
-    'site:three',
+    'site_three',
     'site_four',
 ]
 

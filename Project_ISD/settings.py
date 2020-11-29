@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'channels',
+    #'channels'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-ASGI_APPLICATION="Project_ISD.routing.application"
+#ASGI_APPLICATION="simpleDjangoProject.routing.application"
 
 CHANNEL_LAYERS={
     "default":{

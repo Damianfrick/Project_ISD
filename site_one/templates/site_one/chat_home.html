@@ -6,11 +6,20 @@
 </head>
 <body>
 <input type="text" name="person_name" id="person_name" placeholder="Your Name"><br>
+<form action="/cgi-bin/check-in.cgi" method="post">
+<input type="text" name="room_name" list="room_name"  placeholder="language">
+    <datalist id="room_name">
+        <option value="german">
+        <option value="english">
+        <option value="french">
+</datalist>
+</form>
 <input type="button" name="button" value="Click to Start Chat" id="submit">
 <script>
     document.querySelector("#submit").onclick=function(e){
+        var roomname=document.querySelector("#room_name").value;
         var personname=document.querySelector("#person_name").value;
-        window.location.pathname='site_one/room/'+personname;
+        window.location.pathname='/site_one/room/'+roomname+'/'+personname;
     }
 </script>
 

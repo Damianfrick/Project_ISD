@@ -1,10 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Chat Home</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/main.css'  %}">
+
 </head>
 <body>
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/site_one">News</a></li>
+  <li><a href="/site_two">Contact</a></li>
+  <li style="float:right"><a href="/site_three">About</a></li>
+</ul>
+
 <input type="text" name="person_name" id="person_name" placeholder="Your Name"><br>
 <form action="/cgi-bin/check-in.cgi" method="post">
 <input type="text" name="room_name" list="room_name"  placeholder="language">

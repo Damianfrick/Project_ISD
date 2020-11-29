@@ -1,7 +1,7 @@
-from django.urls import path
 from . import views
+from django.urls import path
 
-app_name = 'site_one'
-urlpatterns = [
-    path('',views.index, name='index' ),
+urlpatterns=[
+    path('',views.ShowChatHome,name='showchat'),
+    path('room/<str:person_name>', views.ShowChatPage, name='showchat'),
 ]

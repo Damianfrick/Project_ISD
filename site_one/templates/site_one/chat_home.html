@@ -16,25 +16,32 @@
   <li><a href="/site_two">Contact</a></li>
   <li style="float:right"><a href="/site_three">About</a></li>
 </ul>
-
-<input type="text" name="person_name" id="person_name" placeholder="Your Name"><br>
-<form action="/cgi-bin/check-in.cgi" method="post">
-<input type="text" name="room_name" list="room_name"  placeholder="language">
-    <datalist id="room_name">
-        <option value="german">
-        <option value="english">
-        <option value="french">
-</datalist>
-</form>
-<input type="button" name="button" value="Click to Start Chat" id="submit">
-<script>
-    document.querySelector("#submit").onclick=function(e){
-        var roomname=document.querySelector("#room_name").value;
-        var personname=document.querySelector("#person_name").value;
-        window.location.pathname='/site_one/room/'+roomname+'/'+personname;
+<div class="loginInputs">
+    <div>
+        <h1>Enter Chatroom</h1>
+    </div>
+    <div class="inputName">
+        <p>Enter Your Name<p>
+        <input type="text" name="person_name" id="person_name" placeholder="Name" required><br>
+    </div>
+    <div>
+        <p>Choose A Language<p>
+        <select id = "room_name">
+               <option value = "german">German</option>
+               <option value = "english">English</option>
+               <option value = "french">French</option>
+        </select>
+    </div>
+    <div>
+    <input type="button" name="button" value="Click to Start Chat" id="submit"></div>
+    <script>
+     document.querySelector("#submit").onclick=function(e){
+            var roomname=document.querySelector("#room_name").value;
+            var personname=document.querySelector("#person_name").value;
+            window.location.pathname='/site_one/room/'+roomname+'/'+personname;
     }
-</script>
-
+    </script>
+</div>
 
 
 </body>

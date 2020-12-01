@@ -11,6 +11,15 @@ body{
 
 }
 
+h1{
+  color: white;
+  font-family: "Franklin Gothic Book";
+}
+
+p{
+  color: white !important;
+  font-family: "Franklin Gothic Book";
+}
 
 ul {
   list-style-type: none;
@@ -55,3 +64,34 @@ li a:hover:not(.active) {
 .watermark leftwatermark{
   color: blue;
 }
+
+.loginInputs {
+  padding: 10px;
+  margin: -100px;
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  margin: -100px 0 0 -150px;
+}
+
+#person_name {
+  padding: 10px;
+  width: 235px;
+}
+
+#room_name {
+  padding: 10px;
+  width: 259px;
+}
+
+#submit {
+  padding: 10px;
+  width: 259px;
+  margin-top: 10px;
+}
+
+#submit:hover {
+  background-color: darkslategrey !important;
+  color: white !important;
+}
+

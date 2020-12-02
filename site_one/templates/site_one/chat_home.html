@@ -9,13 +9,16 @@
           href="{% static 'css/main.css'  %}">
 
 </head>
-<body>
+<body id="libraryChat">
 <ul>
   <li><a class="active" href="/">Home</a></li>
   <li><a href="/site_one">News</a></li>
   <li><a href="/site_two">Contact</a></li>
   <li style="float:right"><a href="/site_three">About</a></li>
 </ul>
+
+<img src="{% static 'site_home/images/library_Pixel_v2.png' %}" alt="library" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; z-index: -100;">
+
 <div class="loginInputs">
     <div>
         <h1>Enter Chatroom</h1> <!-- login header, depending on which building "library chat or bar chat" -->

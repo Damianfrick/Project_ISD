@@ -66,12 +66,14 @@ li a:hover:not(.active) {
 }
 
 .loginInputs {
-  padding: 10px;
+  padding: 35px 50px 50px;
   margin: -100px;
   left: 50%;
   position: absolute;
-  top: 40%;
+  top: 400px;
   margin: -100px 0 0 -150px;
+  background-color: #333;
+  box-shadow: 0px 0px 20px black;
 }
 
 #person_name {

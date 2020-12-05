@@ -102,19 +102,21 @@ li a:hover:not(.active) {
 .live_chat {
   height: 691px;
   width: 761px;
-  overflow-y: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   background-color: #333;
   position: absolute;
   left: 30%;
-  top: 13%;
+  top: 135px;
+  padding: 0px;
 }
 
 #div_data {
 
-  height: 600px;
+  height: 620px;
+  width: 100%;
+  overflow-y: auto;
 }
 
 #message {
@@ -122,7 +124,7 @@ li a:hover:not(.active) {
   width:737px;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 #send_message {
@@ -130,7 +132,7 @@ li a:hover:not(.active) {
   color:white;
   padding:10px;
   border:0px;
-  width:759px;
+  width:761px;
   display: block;
   margin-left: auto;
   margin-right: auto

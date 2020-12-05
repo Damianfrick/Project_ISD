@@ -34,7 +34,7 @@
             var data=JSON.parse(e.data)
             var message=data['message']
             var div=document.querySelector("#div_data");
-            div.innerHTML+='<br><div style="padding:4px;color:#fff;">'+message+'</div>';
+            div.innerHTML+='<div style="padding:4px;color:#fff;">'+message+'</div>';
             console.log(e)
         }
         chatSocket.onclose=function(e){

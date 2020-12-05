@@ -17,12 +17,15 @@
   <li style="float:right"><a href="/site_three">About</a></li>
 </ul>
 
-<div style="height:500px;width:40%;overflow-y:auto; display: block; margin-left: auto; margin-right: auto" id="div_data">
+<img src="{% static 'site_home/images/library_Pixel_v2.png' %}" alt="library" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; z-index: -100;">
 
-</div>
-<div>
-    <input type="text" name="message" id="message" placeholder="Message" style="padding:10px;width:737px; display: block; margin-left: auto; margin-right: auto">
-    <input type="button" value="Send Message" id="send_message" style="background:#669b67;color:#fff;padding:10px;border:0px;width:759px; display: block; margin-left: auto; margin-right: auto">
+
+<div class="live_chat">
+
+    <div id="div_data"></div>
+
+    <input type="text" name="message" id="message" placeholder="Message">
+    <input type="button" value="Send Message" id="send_message">
     <script>
         var roomName='{{ room_name }}';
         var personname='{{ person_name }}';
@@ -31,14 +34,14 @@
             var data=JSON.parse(e.data)
             var message=data['message']
             var div=document.querySelector("#div_data");
-            div.innerHTML+='<br><div style="padding:10px;color:#fff;background:darkgrey;">'+message+'</div>';
+            div.innerHTML+='<br><div style="padding:4px;color:#fff;">'+message+'</div>';
             console.log(e)
         }
         chatSocket.onclose=function(e){
             var data=JSON.parse(e.data)
             var message=data['message']
             var div=document.querySelector("#div_data");
-            div.innerHTML+='<br><div style="padding:10px;color:#fff;background:darkgrey;">'+message+'</div>';
+            div.innerHTML+='<br><div style="padding:4px;color:#fff;">'+message+'</div>';
         }
 
         document.querySelector("#send_message").onclick=function(e){

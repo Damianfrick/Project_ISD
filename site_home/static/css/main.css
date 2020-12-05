@@ -97,3 +97,46 @@ li a:hover:not(.active) {
   color: white !important;
 }
 
+/* CHAT */
+
+.live_chat {
+  height: 691px;
+  width: 761px;
+  overflow-y: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333;
+  position: absolute;
+  left: 30%;
+  top: 13%;
+}
+
+#div_data {
+
+  height: 600px;
+}
+
+#message {
+  padding:10px;
+  width:737px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#send_message {
+  background:lightslategrey;
+  color:white;
+  padding:10px;
+  border:0px;
+  width:759px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#send_message:hover{
+  background-color: darkslategrey !important;
+  color: white !important;
+}

@@ -27,6 +27,16 @@
     <input type="text" name="message" id="message" placeholder="Message">
     <input type="button" value="Send Message" id="send_message">
     <script>
+        
+        /* trigger "button" by pressing "enter" */
+        document.getElementById("message")
+         .addEventListener("keyup", function(event) {
+         event.preventDefault();
+         if (event.keyCode === 13) {
+            document.getElementById("send_message").click();
+    }
+});
+
         var roomName='{{ room_name }}';
         var personname='{{ person_name }}';
         var chatSocket=new WebSocket('ws://'+window.location.host+'/ws/site_one/'+roomName+'/'+personname+'/');

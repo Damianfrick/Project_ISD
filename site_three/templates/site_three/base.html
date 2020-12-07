@@ -50,6 +50,7 @@
 
       //  The API will call this function when the video player is ready.
       function onPlayerReady(event) {
+        event.target.unMute();
         event.target.setVolume(20); // set volume
         event.target.playVideo(); // starts the video
       }

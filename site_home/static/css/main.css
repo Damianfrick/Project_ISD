@@ -16,6 +16,16 @@ h1{
   font-family: "Franklin Gothic Book";
 }
 
+h3{
+  color: black;
+  font-family: "Franklin Gothic Book";
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 0px;
+  padding: 25px;
+}
+
 p{
   color: white !important;
   font-family: "Franklin Gothic Book";
@@ -159,4 +169,68 @@ dt {
   font-size: 24px;
   color: #262b44;
   font-weight: 600;
+}
+
+/* Contact Form */
+
+.contactForm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height:690px;
+  font-family: "Franklin Gothic Book";
+}
+
+.buttonContact {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left:500px;
+}
+
+.form-group {
+  margin-left:500px;
+  margin-right:500px
+}
+
+#inputName {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Franklin Gothic Book";
+}
+
+#inputEmail{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Franklin Gothic Book";
+}
+
+#inputMessage{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Franklin Gothic Book";
 }

@@ -19,6 +19,51 @@
 
 <img src="{% static 'site_home/images/bar.png' %}" alt="bar" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; z-index: -100;">
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<script type='text/javascript'>
+    $(function(){
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+
+
+    $('.x').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+    });
+</script>
+
+<script>
+    function goBack() {
+        window.history.go(-2);
+    }
+</script>
+
+    <div class='popup'>
+    <div class='cnt223'>
+    <h3>STOP! Show me your ID.</h3>
+
+        <div class="bodyguardBar">
+        <img src="{% static 'site_home/images/bodyguard.png' %}" alt="bodyguard">
+        </div>
+    <p id="colorblack">
+    You must be over 18 to enter the bar!
+    <br/>
+    <br/>
+    <a href='' class='close' style="color:green">I Am Over 18</a>
+    <a href='/' class='goBack' style="color:red">I Am Not</a>
+</p>
+</div>
+</div>
+
 <div class="loginInputs">
     <div>
         <h1>Enter Chatroom</h1> <!-- login header, depending on which building "library chat or bar chat" -->

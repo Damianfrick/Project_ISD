@@ -1,3 +1,7 @@
+"""to execute on your PC """
+"""pip install folium"""
+"""pip install pandas"""
+
 import folium
 import pandas as pd
 import os
@@ -13,12 +17,12 @@ m = folium.Map(location=[47,12], tiles='cartodbpositron', zoom_start=5)
 
 m.choropleth(
     geo_data=countries,
-    name='choropleth',
+    name='layer',
     data=state_data,
     columns=['iso_code','current_cases'],
     key_on='feature.id',
     fill_color='YlOrRd',
-    fill_opacity=0.7,
+    fill_opacity=0.6,
     line_opacity=0.0,
     legend_name='Current COVID-19 cases')
 

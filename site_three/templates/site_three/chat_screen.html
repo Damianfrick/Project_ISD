@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/main.css'  %}">
+
+</head>
+<body>
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/news">News</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li style="float:right"><a href="/about">About</a></li>
+</ul>
+
+
+
+
+<div class="live_chat">
+
+    <div id="div_data"></div>
+
+    <input type="text" name="message" id="message" placeholder="Message">
+    <input type="button" value="Send Message" id="send_message">
+    <script>
+
+        /* trigger "button" by pressing "enter" */
+        document.getElementById("message")
+         .addEventListener("keyup", function(event) {
+         event.preventDefault();
+         if (event.keyCode === 13) {
+            document.getElementById("send_message").click();
+    }
+});
+
+        var roomName='{{ room_name }}';
+        var personname='{{ person_name }}';
+        var chatSocket=new WebSocket('ws://'+window.location.host+'/ws/site_three/'+roomName+'/'+personname+'/');
+        chatSocket.onmessage=function(e){
+            var data=JSON.parse(e.data)
+            var message=data['message']
+            var div=document.querySelector("#div_data");
+            div.innerHTML+='<div style="padding:4px;color:#fff;">'+message+'</div>';
+            console.log(e)
+        }
+        chatSocket.onclose=function(e){
+            var data=JSON.parse(e.data)
+            var message=data['message']
+            var div=document.querySelector("#div_data");
+            div.innerHTML+='<br><div style="padding:4px;color:#fff;">'+message+'</div>';
+        }
+
+        document.querySelector("#send_message").onclick=function(e){
+            var message=document.querySelector("#message").value;
+            chatSocket.send(JSON.stringify({'message':message}))
+            document.querySelector("#message").value=''
+        }
+
+    </script>
+</div>
+</body>
+</html>

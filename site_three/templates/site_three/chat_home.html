@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Home</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/main.css'  %}">
+
+</head>
+<body id="libraryChat">
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/news">News</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li style="float:right"><a href="/about">About</a></li>
+</ul>
+
+
+
+<div class="loginInputs">
+    <div>
+        <h1>Enter Chatroom</h1> <!-- login header, depending on which building "library chat or bar chat" -->
+    </div>
+    <div class="inputName">
+        <p>Enter Your Name<p>
+        <input type="text" name="person_name" id="person_name" placeholder="Name" required><br>
+    </div>
+    <div>
+        <p>Choose A Language<p>
+        <select id = "room_name">
+               <option value = "germanadult">German</option>
+               <option value = "englishadult">English</option>
+               <option value = "frenchadult">French</option>
+        </select>
+    </div>
+    <div>
+    <input type="button" name="button" value="Click to Start Chat" id="submit"></div>
+    <script>
+     document.querySelector("#submit").onclick=function(e){
+            var roomname=document.querySelector("#room_name").value;
+            var personname=document.querySelector("#person_name").value;
+            window.location.pathname='/site_three/room/'+roomname+'/'+personname;
+    }
+    </script>
+</div>
+
+
+</body>
+</html>

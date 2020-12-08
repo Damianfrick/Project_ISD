@@ -27,7 +27,8 @@ m.choropleth(
     legend_name='Current COVID-19 cases')
 
 #Global tooltip
-tooltip ='Click for more Info'
+tooltip_info ='Click for more Info'
+tooltip_cases = 'Covid new cases monthly'
 
 #Vega data
 aus = os.path.join('data', 'austria.json')
@@ -39,50 +40,65 @@ sch = os.path.join('data', 'switzerland.json')
 #Info Marker Austria
 folium.Marker([48.214945, 16.417481],
               popup='<strong><a href="https://www.sozialministerium.at/Informationen-zum-Coronavirus/Coronavirus---Aktuelle-Ma%C3%9Fnahmen.html">Corona Info Austria</a></strong>',
-              icon=folium.Icon(color='red'),
-              tooltip=tooltip).add_to(m)
+              icon=folium.Icon(color='green'),
+              tooltip=tooltip_info).add_to(m)
 
 #Info Marker Germany
 folium.Marker([52.411964, 13.406485],
               popup='<strong><a href="https://www.bundesgesundheitsministerium.de/coronavirus.html">Corona Info Germany</a></strong>',
-              icon=folium.Icon(color='red'),
-              tooltip=tooltip).add_to(m)
+              icon=folium.Icon(color='green'),
+              tooltip=tooltip_info).add_to(m)
 
 #Info Marker Liechtenstein
 folium.Marker([47.146309, 9.528885],
               popup='<strong><a href="https://www.regierung.li/coronavirus">Corona Info Liechtenstein</a></strong>',
-              icon=folium.Icon(color='red'),
-              tooltip=tooltip).add_to(m)
+              icon=folium.Icon(color='green'),
+              tooltip=tooltip_info).add_to(m)
 
 #Info Marker Switzerland
 folium.Marker([46.936296, 7.506603],
               popup='<strong><a href="https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/situation-schweiz-und-international.html">Corona Info Switzerland</a></strong>',
-              icon=folium.Icon(color='red'),
-              tooltip=tooltip).add_to(m)
+              icon=folium.Icon(color='green'),
+              tooltip=tooltip_info).add_to(m)
 
 
 
 #Austria_New_Cases
 folium.Marker([47.818428, 14.373676],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(aus))))).add_to(m)
+              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(aus)))),
+              icon=folium.Icon(color='red', icon='signal'),
+              tooltip=tooltip_cases).add_to(m)
 
 #Germany_New_Cases
 folium.Marker([51.430192, 10.153662],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(ger))))).add_to(m)
+              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(ger)))),
+              icon=folium.Icon(color='red', icon='signal'),
+              tooltip=tooltip_cases).add_to(m)
 
 #Liechtenstein_New_Cases
 folium.Marker([47.087587, 9.551893],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(fli))))).add_to(m)
+              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(fli)))),
+              icon=folium.Icon(color='red', icon='signal'),
+              tooltip=tooltip_cases).add_to(m)
 
 #Switzerland_New_Cases
 folium.Marker([46.460855, 8.077289],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(sch))))).add_to(m)
+              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(sch)))),
+              icon=folium.Icon(color='red', icon='signal'),
+              tooltip=tooltip_cases).add_to(m)
+
+
+#Info Marker University
+folium.Marker([47.149802, 9.516286],
+              popup='<strong><a href="https://www.uni.li/de/universitaet-liechtenstein/#gsc.tab=0">Uni Li</a></strong>',
+              icon=folium.Icon(color='blue', icon='home', icon_color='white'),
+              tooltip=tooltip_info).add_to(m)
 
 
 
 #Circle
 folium.CircleMarker(
-    location=[47.149659, 9.516347],
+    location=[47.149802, 9.516286],
     radius=4,
     popup='',
     color='#FF0000',

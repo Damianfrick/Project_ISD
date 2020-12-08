@@ -22,5 +22,5 @@ def contact(request):
         contact.email=email
         contact.subject=subject
         contact.save()
-        return HttpResponse("<h1>THANKS FOR CONTACT US</h1>")
+        return render(request,'site_home/contact_done.html')
     return render(request, 'site_home/contact.html')

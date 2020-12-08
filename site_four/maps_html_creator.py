@@ -7,14 +7,13 @@ import pandas as pd
 import os
 
 countries = os.path.join('data', 'countries_world.json')
-covid_data = os.path.join('data', 'Data_use_01.csv')
+covid_data = os.path.join('data', 'Data_covid_numbers.csv')
 state_data = pd.read_csv(covid_data)
 
 #Create map with start location, design and zoom
 m = folium.Map(location=[47,12], tiles='cartodbpositron', zoom_start=5)
 
-
-
+#Overlay
 m.choropleth(
     geo_data=countries,
     name='layer',

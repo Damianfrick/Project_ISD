@@ -3,22 +3,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BBC News</title>
 
-    <link rel="stylesheet" type="text/css"
+        <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css'  %}">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-</head>
-<body>
-<ul>
+    <ul>
   <li><a class="active" href="/">Home</a></li>
   <li><a href="/news">News</a></li>
   <li><a href="/contact">Contact</a></li>
   <li style="float:right"><a href="/about">About</a></li>
 </ul>
+</head>
+<body>
 
+
+
+
+<div class="jumbotron" style="color:black">
+
+    <h1 style="color:black">
+        This is the latest news
+
+    </h1>
+
+</div>
+
+
+<div class="container">
+    {% for new, des, i in mylist %}
+        <h4>{{new}}</h4>
+    <img src="{{i}}" alt="">
+    {{value | linebreaks}}
+
+     {{des}} 
+    {{value | linebreaks}}
+
+
+
+    {% endfor %}
+
+
+
+
+</div>
 
 </body>
 </html>

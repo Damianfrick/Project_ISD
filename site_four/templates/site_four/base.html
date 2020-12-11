@@ -1,7 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
-<head>    
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Home</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/main.css'  %}">
+
+</head>
+<body id="libraryChat">
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/news">News</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li style="float:right"><a href="/about">About</a></li>
+</ul>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
+
         <script>
             L_NO_TOUCH = false;
             L_DISABLE_3D = false;
@@ -24,11 +40,11 @@
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
                 #map_4ecd2e50866447f089ab8a50e980bf49 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
+                    position: absolute;
+                    width: 1600px;
+                    height: 800px;
+                    left: 150px;
+                    top: 100px;
                 }
             </style>
         
@@ -733,3 +749,5 @@
             ).addTo(map_4ecd2e50866447f089ab8a50e980bf49);
         
 </script>
+</body>
+</html>

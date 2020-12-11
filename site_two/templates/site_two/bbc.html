@@ -21,8 +21,8 @@
 
 <div class="container">
     {% for new, des, i in mylist %}
+        <h4>{{new}}</h4>
     <img src="{{i}}" alt="">
-    <h3>News:</h3> {{new}}
     {{value | linebreaks}}
 
     <h4>Description:</h4> {{des}}

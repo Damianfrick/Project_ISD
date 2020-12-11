@@ -35,12 +35,18 @@ p#colorblack{
   color: black !important;
 }
 
+/* navbar*/
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  position: fixed;  /* fixed navbar, still there even if you scroll down */
+  width: 100%;
+  top: 0;
+  z-index: 99;
 }
 
 li {

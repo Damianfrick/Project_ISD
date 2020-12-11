@@ -14,51 +14,51 @@
             "name": "table",
             "values": [
                 {
-                    "x": "Jan 2020",
+                    "x": "Jan 20",
                     "y": 0
                 },
                 {
-                    "x": "Feb 2020",
+                    "x": "Feb 20",
                     "y": 9
                 },
                 {
-                    "x": "Mar 2020",
+                    "x": "Mar 20",
                     "y": 10171
                 },
                 {
-                    "x": "April.2020",
+                    "x": "Apr 20",
                     "y": 5272
                 },
                 {
-                    "x": "May.2020",
+                    "x": "May 20",
                     "y": 1279
                 },
                 {
-                    "x": "June.2020",
+                    "x": "Jun 20",
                     "y": 1035
                 },
                 {
-                    "x": "July.2020",
+                    "x": "Jul 20",
                     "y": 3364
                 },
                 {
-                    "x": "August.2020",
+                    "x": "Aug 20",
                     "y": 6308
                 },
                 {
-                    "x": "September.2020",
+                    "x": "Sept 20",
                     "y": 17375
                 },
                 {
-                    "x": "October.2020",
+                    "x": "Oct 20",
                     "y": 60112
                 },
                 {
-                    "x": "November.2020",
+                    "x": "Nov 20",
                     "y": 177531
                 },
                 {
-                    "x": "Decemeber.2020",
+                    "x": "Dec 20",
                     "y": 20974
                 }
             ]
@@ -69,6 +69,7 @@
                 {
                     "label": "Month"
                 }
+
             ]
         },
         {
@@ -80,7 +81,7 @@
             ]
         }
     ],
-    "height": 200,
+    "height": 250,
     "marks": [
         {
             "from": {
@@ -127,8 +128,9 @@
                     "baseline": {
                         "value": "middle"
                     },
+
                     "dy": {
-                        "value": 35
+                        "value": 70
                     },
                     "fill": {
                         "value": "#000"
@@ -178,7 +180,7 @@
                         "value": "Arial"
                     },
                     "fontSize": {
-                        "value": 14
+                        "value": 10
                     },
                     "text": {
                         "field": "data.label"
@@ -219,7 +221,8 @@
             "nice": true,
             "range": "height"
         }
+
     ],
     "viewport": null,
-    "width": 400
+    "width": 350
 }

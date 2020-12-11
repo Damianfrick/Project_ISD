@@ -65,25 +65,25 @@ folium.Marker([46.936296, 7.506603],
 
 #Austria_New_Cases
 folium.Marker([47.818428, 14.373676],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(aus)))),
+              popup=folium.Popup(width=800, height=600).add_child(folium.Vega(json.load(open(aus)))),
               icon=folium.Icon(color='red', icon='signal'),
               tooltip=tooltip_cases).add_to(m)
 
 #Germany_New_Cases
 folium.Marker([51.430192, 10.153662],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(ger)))),
+              popup=folium.Popup(width=480, height=250).add_child(folium.Vega(json.load(open(ger)))),
               icon=folium.Icon(color='red', icon='signal'),
               tooltip=tooltip_cases).add_to(m)
 
 #Liechtenstein_New_Cases
 folium.Marker([47.087587, 9.551893],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(fli)))),
+              popup=folium.Popup(width=480, height=250).add_child(folium.Vega(json.load(open(fli)))),
               icon=folium.Icon(color='red', icon='signal'),
               tooltip=tooltip_cases).add_to(m)
 
 #Switzerland_New_Cases
 folium.Marker([46.460855, 8.077289],
-              popup=folium.Popup(max_width=450).add_child(folium.Vega(json.load(open(sch)))),
+              popup=folium.Popup(width=480, height=250).add_child(folium.Vega(json.load(open(sch)))),
               icon=folium.Icon(color='red', icon='signal'),
               tooltip=tooltip_cases).add_to(m)
 

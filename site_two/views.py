@@ -28,7 +28,7 @@ def index(request):
 
 
 
-"""def bbc(request):
+def bbc(request):
     newsapi = NewsApiClient(api_key="5fe2cb41f9fb4d36894e6fb826c8228c")
     topheadlines = newsapi.get_top_headlines(sources='bbc-news')
 
@@ -50,4 +50,4 @@ def index(request):
     mylist = zip(news, desc, img)
 
 
-    return render(request, 'bbc.html', context={"mylist":mylist})"""
+    return render(request, 'site_two/bbc.html', context={"mylist":mylist})

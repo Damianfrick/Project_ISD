@@ -15,22 +15,23 @@
   <li style="float:right"><a href="/about">About</a></li>
 </ul>
 </head>
-<body>
+<body style="background-color: white">
+
+<div class="newsBody">
 
 
 
-
-<div class="jumbotron" style="color:black; margin-top: 50px;">
+    <div class="jumbotron" style="color:black; margin-top: 50px;">
 
     <h1 style="color:black">
         The Wall Street Journal
 
     </h1>
 
-</div>
+    </div>
 
 
-<div class="container">
+    <div class="container">
     {% for new, des, i, url in mylist %}
         <h4>{{new}}</h4>
     <img src="{{i}}" alt="">
@@ -47,7 +48,7 @@
 
 
 
+    </div>
 </div>
-
 </body>
 </html>

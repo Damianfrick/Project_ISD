@@ -413,3 +413,9 @@ button.print-button:hover .print-icon::after {
   height:120%;
   transition: height .2s .15s, border-width 0s .16s;
 }
+
+.newsBody {
+  background-color: white;
+  margin-left: 50px;
+  margin-top: 74px;
+}

@@ -4,7 +4,7 @@ from newsapi import NewsApiClient
 # Create your views here.
 def index(request):
     newsapi = NewsApiClient(api_key="5fe2cb41f9fb4d36894e6fb826c8228c")
-    topheadlines = newsapi.get_top_headlines(sources='al-jazeera-english')
+    topheadlines = newsapi.get_top_headlines(sources='the-wall-street-journal')
 
 
     articles = topheadlines['articles']

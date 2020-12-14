@@ -23,6 +23,8 @@
 
     <div id="div_data"></div>
 
+    <!-- chat window including input box for type message and button for sending it on click -->
+
     <input type="text" name="message" id="message" placeholder="Message">
     <input type="button" value="Send Message" id="send_message">
     <script>
@@ -35,7 +37,7 @@
             document.getElementById("send_message").click();
     }
 });
-
+        /* connecting to websocket*/
         var roomName='{{ room_name }}';
         var personname='{{ person_name }}';
         var chatSocket=new WebSocket('ws://'+window.location.host+'/ws/site_one/'+roomName+'/'+personname+'/');
@@ -45,14 +47,14 @@
             var div=document.querySelector("#div_data");
             div.innerHTML+='<div style="padding:4px;color:#fff;">'+message+'</div>';
             console.log(e)
-        }
+        }   /* on socket connection or on socket close: print message */
         chatSocket.onclose=function(e){
             var data=JSON.parse(e.data)
             var message=data['message']
             var div=document.querySelector("#div_data");
             div.innerHTML+='<br><div style="padding:4px;color:#fff;">'+message+'</div>';
         }
-
+        /* sending message to the socket */
         document.querySelector("#send_message").onclick=function(e){
             var message=document.querySelector("#message").value;
             chatSocket.send(JSON.stringify({'message':message}))

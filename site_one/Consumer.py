@@ -3,6 +3,8 @@ import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 
+"""Consumer class which handle Connect, Disconnect, send and receive messages,
+ sending to everyone if someone enter or leave the chat"""
 
 class Consumer(WebsocketConsumer):
     def connect(self):

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CNN</title>
+
+        <link rel="stylesheet" type="text/css"
+          href="{% static 'css/main.css'  %}">
+
+<ul id="fixedNavbar">
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/news">News</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li style="float:right"><a href="/about">About</a></li>
+</ul>
+</head>
+<body>
+
+<img src="{% static 'site_home/images/paperBackground.jpg' %}" alt="bar" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; z-index: -100;">
+
+<div class="newsBody">
+
+
+
+    <div class="jumbotron" style="color:black; margin-top: 50px;">
+
+    <h6 style="color:black">
+        CNN
+
+    </h6>
+
+    </div>
+
+
+    <div class="container">
+    {% for new, des, i, url in mylist %}
+        <div class="newsBox">
+
+    <div class="imgContainer">
+    <img src="{{i}}" alt="" style="width:100%">
+    {{value | linebreaks}}
+        </div>
+          <h5>{{new}}</h5>
+<div class="contents">
+    <p#colorblack>{{des}}</p>
+    {{value | linebreaks}}
+
+    <div class="buttonNews">
+  <div class="containerNews">
+      <a href="{{url}}" class="bttn effect04" data-sm-link-text="CLICK" target="_blank"><span>GO TO ARTICLE</span></a>
+  </div>
+</div>
+
+
+
+
+    </div><br>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+
+    {% endfor %}
+
+
+
+
+    </div>
+</div>
+</body>
+</html>

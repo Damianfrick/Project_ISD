@@ -9,5 +9,6 @@ urlpatterns = [
     path('', include('site_home.urls')),
     path('site_four/', include('site_four.urls')),
     path('site_two/bbc/', include('site_two.urls')),
-    path('site_two/google/', include('site_two.urls'))
+    path('site_two/google/', include('site_two.urls')),
+    path('site_two/cnn/', include('site_two.urls'))
 ]

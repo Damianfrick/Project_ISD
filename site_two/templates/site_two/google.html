@@ -23,24 +23,31 @@
 <div class="newsBody">
     <div class="jumbotron" style="color:black; margin-top: 50px;">
 
-    <h1 style="color:black">
+    <h6 style="color:black">
         Google News
 
-    </h1>
+    </h6>
 
     </div>
 
 
     <div class="container">
     {% for new, des, i, url in mylist %}
-        <h4>{{new}}</h4>
+        <h5>{{new}}</h5>
+        <div class="image">
     <img src="{{i}}" alt="">
     {{value | linebreaks}}
-
-    <h4>Description:</h4> {{des}}
+        </div>
+<div class="contents">
+    <p#colorblack>{{des}}</p>
     {{value | linebreaks}}
       <a href="{{url}}">{{url}}</a>
-
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
 
 

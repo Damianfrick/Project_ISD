@@ -35,15 +35,27 @@
 
     <div class="container">
     {% for new, des, i, url in mylist %}
-        <h5>{{new}}</h5>
-    <div class="image">
-    <img src="{{i}}" alt="">
+        <div class="newsBox">
+
+    <div class="imgContainer">
+    <img src="{{i}}" alt="" style="width:100%">
     {{value | linebreaks}}
         </div>
+          <h5>{{new}}</h5>
 <div class="contents">
     <p#colorblack>{{des}}</p>
     {{value | linebreaks}}
-      <a href="{{url}}">{{url}}</a>
+
+    <div class="buttonNews">
+  <div class="containerNews">
+      <a href="{{url}}" class="bttn effect04" data-sm-link-text="CLICK" target="_blank"><span>GO TO ARTICLE</span></a>
+  </div>
+</div>
+
+
+
+
+    </div><br>
         </div>
         <br />
         <br />

@@ -7,5 +7,5 @@ urlpatterns = [
     path('',views.index, name='index' ),
     path('bbc/', views.bbc, name='BBC'),
     path('google/', views.google, name='Google'),
-    path('cnn/', views.google, name='CNN')
+    path('cnn/', views.cnn, name='CNN')
 ]

@@ -331,9 +331,11 @@ dt {
 button.print-button {
   width: 100px;
   height: 100px;
+  left: 1450px;
 }
 span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
   border: solid 4px #333;
+
 }
 span.print-icon::after {
   border-width: 2px;

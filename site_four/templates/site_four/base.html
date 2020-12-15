@@ -45,9 +45,9 @@
             <style>
                 #map_4ecd2e50866447f089ab8a50e980bf49 {
                     position: absolute;
-                    width: 1600px;
-                    height: 800px;
-                    left: 150px;
+                    width: 1400px;
+                    height: 650px;
+                    left: 20px;
                     top: 130px;
                     box-shadow: 0px 0px 20px black;
                     }
@@ -759,9 +759,16 @@
 <container></container><br>
 
 
-        <img src="{% static 'site_home/images/marker_map_chart.png' %}" alt="map_legend"><br><br><br>
-        <img src="{% static 'site_home/images/marker_map_info.png' %}" alt="map_legend"><br><br><br>
-        <img src="{% static 'site_home/images/marker_map_home.png' %}" alt="map_legend"><br><br><br>
+        <img src="{% static 'site_home/images/marker_map_chart.png' %}" alt="map_legend" style="position:relative; left:1480px">
+        <b style="position: relative; left: 1480px;">Monthly cases 2020
+
+        <img src="{% static 'site_home/images/marker_map_info.png' %}" alt="map_legend" style="position:relative; top: 80px; right: 170px;">
+        <b style="position: relative; top: 80px; right: 170px;">Country info to COVID-19
+
+        <img src="{% static 'site_home/images/marker_map_home.png' %}" alt="map_legend" style="position:relative; top: 80px; right: 208px;">
+        <b style="position: relative; top: 80px; right: 208px;">Link to University of Liechtenstein
+
+            <b style="position: relative; top: 430px; right:1720px;">Data retrieved on 07.12.2020 from https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
 
 </body>
 </html>

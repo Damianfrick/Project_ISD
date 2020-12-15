@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from newsapi import NewsApiClient
 
-# Create your views here.
+# The Wall Street Journal
 def index(request):
     newsapi = NewsApiClient(api_key="5fe2cb41f9fb4d36894e6fb826c8228c")
     topheadlines = newsapi.get_top_headlines(sources='the-wall-street-journal')
@@ -29,7 +29,7 @@ def index(request):
     return render(request, 'site_two/base.html', context={"mylist":mylist})
 
 
-
+#BBC News
 def bbc(request):
     newsapi = NewsApiClient(api_key="5fe2cb41f9fb4d36894e6fb826c8228c")
     topheadlines = newsapi.get_top_headlines(sources='bbc-news')
@@ -56,6 +56,8 @@ def bbc(request):
 
     return render(request, 'site_two/bbc.html', context={"mylist":mylist})
 
+
+#Google News
 def google(request):
     newsapi = NewsApiClient(api_key="5fe2cb41f9fb4d36894e6fb826c8228c")
     topheadlines = newsapi.get_top_headlines(sources='google-news')
@@ -82,6 +84,8 @@ def google(request):
 
     return render(request, 'site_two/google.html', context={"mylist":mylist})
 
+
+# CNN News
 def cnn(request):
     newsapi = NewsApiClient(api_key="5fe2cb41f9fb4d36894e6fb826c8228c")
     topheadlines = newsapi.get_top_headlines(sources='cnn')

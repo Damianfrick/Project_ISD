@@ -207,8 +207,25 @@ dt {
   margin-left:500px;
 }
 
+.buttonContact1 {
+  background-color: darkslategray;
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:40px;
+  margin-top: 100px
+}
+
 .buttonContact:hover {
   background-color: #45a049;
+}
+
+.allnewsbuttons {
+  margin-left: 33%;
 }
 
 .form-group {
@@ -441,6 +458,11 @@ h5 {
 h6 {
   font-size: 50px;
   text-align: center;
+}
+
+h7 {
+  font-size: 20px;
+  color: white;
 }
 
 .image {

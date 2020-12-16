@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css'  %}">
 
+    <!--Nav Bar-->
 <ul id="fixedNavbar">
   <li><a class="active" href="/">Home</a></li>
   <li><a href="/news">News</a></li>
@@ -17,7 +18,7 @@
 </head>
 <body>
 
-
+<!--Buttons with Links to other outlets-->
 <div class="allnewsbuttons">
 <div class="buttonContact1">
     <a href="/coffeeshop"><h7>Wall St. Journal</h7></a>
@@ -52,7 +53,7 @@
 
     </div>
 
-
+<!--Content-->
     <div class="container">
     {% for new, des, i, url in mylist %}
         <div class="newsBox">

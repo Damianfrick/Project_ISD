@@ -40,7 +40,7 @@
         /* connecting to websocket*/
         var roomName='{{ room_name }}';
         var personname='{{ person_name }}';
-        var chatSocket=new WebSocket('ws://'+window.location.host+'/ws/site_one/'+roomName+'/'+personname+'/');
+        var chatSocket=new WebSocket('ws://'+window.location.host+'/ws/library/'+roomName+'/'+personname+'/');
         chatSocket.onmessage=function(e){
             var data=JSON.parse(e.data)
             var message=data['message']

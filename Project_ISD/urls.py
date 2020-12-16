@@ -3,12 +3,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('site_one/', include('site_one.urls')),
-    path('site_two/', include('site_two.urls')),
-    path('site_three/', include('site_three.urls')),
+    path('library/', include('site_one.urls')),
+    path('coffeeshop/', include('site_two.urls')),
+    path('bar/', include('site_three.urls')),
     path('', include('site_home.urls')),
-    path('site_four/', include('site_four.urls')),
-    path('site_two/bbc/', include('site_two.urls')),
-    path('site_two/google/', include('site_two.urls')),
-    path('site_two/cnn/', include('site_two.urls'))
+    path('covidinfo/', include('site_four.urls')),
+    path('coffeeshop/bbc/', include('site_two.urls')),
+    path('coffeeshop/google/', include('site_two.urls')),
+    path('coffeeshop/cnn/', include('site_two.urls'))
 ]

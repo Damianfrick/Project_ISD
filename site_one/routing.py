@@ -5,5 +5,5 @@ from site_one import Consumer
 """websocket path: http upgrade (handshake) to ws"""
 
 websocket_urlpatterns=[
-    re_path(r'ws/site_one/(?P<room_name>\w+)/(?P<person_name>\w+)/$',Consumer.Consumer.as_asgi())
+    re_path(r'ws/library/(?P<room_name>\w+)/(?P<person_name>\w+)/$',Consumer.Consumer.as_asgi())
 ]
